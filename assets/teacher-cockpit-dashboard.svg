@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 920" role="img" aria-labelledby="title desc">
+  <title id="title">ตัวอย่างแดชบอร์ด Teacher Cockpit SMT ป.4/2</title>
+  <desc id="desc">ภาพจำลองแดชบอร์ดระบบติดตามผู้เรียน แสดงเมนูด้านซ้าย การ์ดสรุปข้อมูล กราฟ และภาพรวมห้องเรียน</desc>
+  <defs>
+    <linearGradient id="sidebar" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#183f7a"/>
+      <stop offset="1" stop-color="#071a3b"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#12345c" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="920" fill="#edf3fb"/>
+  <rect width="132" height="920" fill="url(#sidebar)"/>
+  <circle cx="26" cy="26" r="17" fill="#fff"/>
+  <circle cx="26" cy="26" r="13" fill="#0ea5d7"/>
+  <text x="48" y="24" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="700">Teacher</text>
+  <text x="48" y="43" fill="#fff" font-family="Arial, sans-serif" font-size="18" font-weight="800">SMT ป.4/2</text>
+  <text x="48" y="60" fill="#c8daf2" font-family="Arial, sans-serif" font-size="10">อนุบาลหนองหานวิทยายน</text>
+  <g font-family="Arial, sans-serif" font-size="14" font-weight="700">
+    <rect x="8" y="92" width="116" height="40" rx="8" fill="#3f6095"/>
+    <text x="36" y="118" fill="#fff">แดชบอร์ด</text>
+    <text x="16" y="172" fill="#dce8f8">โปรไฟล์นักเรียน</text>
+    <text x="16" y="214" fill="#dce8f8">เช็คชื่อ</text>
+    <text x="16" y="256" fill="#dce8f8">งานค้าง</text>
+    <text x="16" y="298" fill="#dce8f8">พฤติกรรม/คะแนน</text>
+    <text x="16" y="340" fill="#dce8f8">ติดตาม</text>
+    <text x="16" y="382" fill="#dce8f8">สรุปรายสัปดาห์</text>
+    <text x="16" y="424" fill="#dce8f8">รายงาน</text>
+  </g>
+  <text x="30" y="852" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="700">ครูประจำชั้น</text>
+  <text x="24" y="871" fill="#dce8f8" font-family="Arial, sans-serif" font-size="9">นายพิชญานนท์ วัจนสุนทร</text>
+
+  <text x="158" y="36" fill="#17335b" font-family="Arial, sans-serif" font-size="23" font-weight="800">แดชบอร์ดหลัก</text>
+  <text x="158" y="60" fill="#71849d" font-family="Arial, sans-serif" font-size="13">Teacher Cockpit SMT ป.4/2 · อัปเดต 12:33</text>
+  <rect x="1580" y="16" width="44" height="30" rx="7" fill="#fff"/>
+  <text x="1594" y="37" fill="#1d4c86" font-family="Arial, sans-serif" font-size="16">↻</text>
+  <rect x="1638" y="16" width="96" height="30" rx="7" fill="#fff"/>
+  <text x="1652" y="36" fill="#17335b" font-family="Arial, sans-serif" font-size="12" font-weight="700">เปลี่ยนผู้บันทึก</text>
+
+  <g filter="url(#shadow)">
+    <g font-family="Arial, sans-serif">
+      <rect x="154" y="86" width="416" height="70" rx="10" fill="url(#panel)" stroke="#dbe8f5"/>
+      <text x="174" y="111" fill="#497cc6" font-size="12" font-weight="700">นักเรียนทั้งหมด</text>
+      <text x="174" y="140" fill="#17335b" font-size="25" font-weight="800">35</text>
+      <text x="224" y="140" fill="#6d7f96" font-size="12">SMT ป.4/2</text>
+      <rect x="586" y="86" width="416" height="70" rx="10" fill="url(#panel)" stroke="#dbe8f5"/>
+      <text x="606" y="111" fill="#497cc6" font-size="12" font-weight="700">ครูประจำชั้น</text>
+      <text x="606" y="140" fill="#17335b" font-size="25" font-weight="800">3 คน</text>
+      <rect x="1018" y="86" width="416" height="70" rx="10" fill="url(#panel)" stroke="#dbe8f5"/>
+      <text x="1038" y="111" fill="#497cc6" font-size="12" font-weight="700">แจ้งเตือนวันนี้</text>
+      <text x="1038" y="140" fill="#17335b" font-size="25" font-weight="800">0</text>
+      <rect x="1450" y="86" width="300" height="70" rx="10" fill="url(#panel)" stroke="#dbe8f5"/>
+      <text x="1470" y="111" fill="#497cc6" font-size="12" font-weight="700">มา / ขาด</text>
+      <text x="1470" y="140" fill="#17335b" font-size="25" font-weight="800">0/0</text>
+    </g>
+  </g>
+
+  <rect x="154" y="182" width="1596" height="84" rx="10" fill="#fffdf6" stroke="#f3c74f"/>
+  <text x="174" y="212" fill="#17335b" font-family="Arial, sans-serif" font-size="20" font-weight="800">แจ้งเตือนติดตามวันนี้</text>
+  <rect x="174" y="230" width="820" height="24" rx="7" fill="#fff"/>
+  <circle cx="194" cy="242" r="11" fill="#e7f0ff"/>
+  <text x="214" y="247" fill="#17335b" font-family="Arial, sans-serif" font-size="12" font-weight="700">วันนี้ยังไม่มีรายการแจ้งเตือน</text>
+  <rect x="1644" y="206" width="42" height="21" rx="10" fill="#ffe7e7"/>
+  <text x="1654" y="221" fill="#d63939" font-family="Arial, sans-serif" font-size="11" font-weight="700">เร่งด่วน 0</text>
+  <rect x="1694" y="206" width="34" height="21" rx="10" fill="#fff0d6"/>
+  <text x="1704" y="221" fill="#b56b00" font-family="Arial, sans-serif" font-size="11" font-weight="700">เฝ้าดู 0</text>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="154" y="282" width="780" height="150" rx="10" fill="#fff" stroke="#dbe8f5"/>
+    <text x="174" y="312" fill="#17335b" font-size="20" font-weight="800">การเข้าเรียน 7 วันล่าสุด</text>
+    <g fill="#edf3fb">
+      <rect x="214" y="380" width="20" height="4" rx="2"/>
+      <rect x="334" y="380" width="20" height="4" rx="2"/>
+      <rect x="454" y="380" width="20" height="4" rx="2"/>
+      <rect x="574" y="380" width="20" height="4" rx="2"/>
+      <rect x="694" y="380" width="20" height="4" rx="2"/>
+      <rect x="814" y="380" width="20" height="4" rx="2"/>
+    </g>
+    <text x="478" y="360" fill="#8a9ab0" font-size="13">ยังไม่มีข้อมูลเข้าเรียน</text>
+    <circle cx="174" cy="418" r="3" fill="#10b981"/>
+    <text x="184" y="422" fill="#71849d" font-size="11">มา</text>
+    <circle cx="214" cy="418" r="3" fill="#f97316"/>
+    <text x="224" y="422" fill="#71849d" font-size="11">สาย</text>
+    <circle cx="254" cy="418" r="3" fill="#ef4444"/>
+    <text x="264" y="422" fill="#71849d" font-size="11">ขาด</text>
+
+    <rect x="950" y="282" width="800" height="150" rx="10" fill="#fff" stroke="#dbe8f5"/>
+    <text x="970" y="312" fill="#17335b" font-size="20" font-weight="800">งานค้าง Top 10</text>
+    <rect x="970" y="334" width="760" height="74" rx="8" fill="#fff" stroke="#e5edf7" stroke-dasharray="3 4"/>
+    <text x="1304" y="379" fill="#8a9ab0" font-size="13">ยังไม่มีงานค้าง</text>
+
+    <rect x="154" y="446" width="780" height="150" rx="10" fill="#fff" stroke="#dbe8f5"/>
+    <text x="174" y="476" fill="#17335b" font-size="20" font-weight="800">พฤติกรรม 30 วัน</text>
+    <rect x="174" y="498" width="740" height="76" rx="8" fill="#fff" stroke="#e5edf7" stroke-dasharray="3 4"/>
+    <text x="488" y="544" fill="#8a9ab0" font-size="13">ยังไม่มีบันทึกพฤติกรรมใน 30 วัน</text>
+
+    <rect x="950" y="446" width="800" height="150" rx="10" fill="#fff" stroke="#dbe8f5"/>
+    <text x="970" y="476" fill="#17335b" font-size="20" font-weight="800">สัดส่วนความเสี่ยง</text>
+    <circle cx="1014" cy="522" r="35" fill="none" stroke="#17a34a" stroke-width="16"/>
+    <text x="1000" y="529" fill="#17335b" font-size="19" font-weight="800">35</text>
+    <text x="1076" y="505" fill="#17335b" font-size="12" font-weight="700">ปกติ</text>
+    <rect x="1076" y="512" width="620" height="6" rx="3" fill="#16a34a"/>
+    <text x="1710" y="517" fill="#17335b" font-size="11" font-weight="700">35</text>
+    <text x="1076" y="535" fill="#17335b" font-size="12" font-weight="700">เฝ้าดู</text>
+    <rect x="1076" y="542" width="620" height="6" rx="3" fill="#eef3fb"/>
+    <text x="1710" y="547" fill="#17335b" font-size="11" font-weight="700">0</text>
+    <text x="1076" y="565" fill="#17335b" font-size="12" font-weight="700">เร่งด่วน</text>
+    <rect x="1076" y="572" width="620" height="6" rx="3" fill="#eef3fb"/>
+    <text x="1710" y="577" fill="#17335b" font-size="11" font-weight="700">0</text>
+
+    <rect x="154" y="610" width="1080" height="206" rx="10" fill="#fff" stroke="#dbe8f5"/>
+    <text x="174" y="640" fill="#17335b" font-size="20" font-weight="800">แนวโน้มที่ครูควรรู้วันนี้</text>
+    <rect x="174" y="666" width="1038" height="34" rx="8" fill="#fff" stroke="#dbe8f5"/>
+    <circle cx="194" cy="683" r="12" fill="#e7f0ff"/>
+    <text x="220" y="688" fill="#17335b" font-size="13" font-weight="700">ยังไม่มีนักเรียนที่เข้าตามเกณฑ์ติดตาม</text>
+
+    <rect x="1250" y="610" width="500" height="206" rx="10" fill="#fff" stroke="#dbe8f5"/>
+    <text x="1270" y="640" fill="#17335b" font-size="20" font-weight="800">ภาพรวมห้อง</text>
+    <line x1="1270" x2="1728" y1="672" y2="672" stroke="#dbe8f5"/>
+    <text x="1270" y="696" fill="#71849d" font-size="13">ครูประจำชั้น</text>
+    <text x="1696" y="696" fill="#17335b" font-size="13" font-weight="800">3 คน</text>
+    <line x1="1270" x2="1728" y1="716" y2="716" stroke="#dbe8f5"/>
+    <text x="1270" y="740" fill="#71849d" font-size="13">พฤติกรรม 30 วัน</text>
+    <text x="1690" y="740" fill="#17335b" font-size="13" font-weight="800">0 รายการ</text>
+    <line x1="1270" x2="1728" y1="760" y2="760" stroke="#dbe8f5"/>
+    <text x="1270" y="784" fill="#71849d" font-size="13">ยังไม่เช็คชื่อวันนี้</text>
+    <text x="1696" y="784" fill="#17335b" font-size="13" font-weight="800">35 คน</text>
+  </g>
+</svg>

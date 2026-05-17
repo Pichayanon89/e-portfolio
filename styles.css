@@ -724,6 +724,91 @@ h3 {
   color: var(--muted);
 }
 
+.social-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.social-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #17335b;
+  border: 1px solid rgba(0, 166, 214, 0.25);
+  background: #fff;
+  font-weight: 800;
+}
+
+.social-actions a:first-child {
+  color: #fff;
+  background: #1877f2;
+  border-color: #1877f2;
+}
+
+.media-follow {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.7fr);
+  gap: 18px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(56, 217, 255, 0.12), rgba(244, 184, 74, 0.1)),
+    #fbfcfa;
+  box-shadow: 0 12px 36px rgba(7, 26, 47, 0.06);
+}
+
+.media-follow span {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.media-follow p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.media-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.media-links a {
+  display: block;
+  min-height: 96px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(7, 26, 47, 0.06);
+}
+
+.media-links strong,
+.media-links span {
+  display: block;
+}
+
+.media-links strong {
+  margin-bottom: 6px;
+  color: #06496a;
+  font-size: 18px;
+}
+
+.media-links span {
+  color: var(--muted);
+}
+
 .cockpit-card {
   background:
     linear-gradient(140deg, rgba(56, 217, 255, 0.16), rgba(25, 197, 138, 0.1)),
@@ -1054,7 +1139,8 @@ h3 {
   .cert-hero,
   .cockpit-hero,
   .cockpit-explain-layout,
-  .evidence-showcase {
+  .evidence-showcase,
+  .media-follow {
     grid-template-columns: 1fr;
   }
 
@@ -1064,6 +1150,7 @@ h3 {
   .innovation-grid,
   .certificate-grid,
   .evidence-media-grid,
+  .media-links,
   .cockpit-feature-grid {
     grid-template-columns: 1fr;
   }

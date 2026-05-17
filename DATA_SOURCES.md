@@ -28,6 +28,7 @@
 ## ระบบออนไลน์ที่เชื่อมในเว็บ
 
 - Teacher Cockpit SMT ป.4/2: `https://script.google.com/a/macros/udonthani3.go.th/s/AKfycbz833jyCiG9Ym9F62Zz6P6R_0fb-Wr73dtIfARasummS_XTPFev3g6EJjS_lcOoB0Gs/exec`
+- Quick Record: `https://pichayanon89.github.io/lesson-records/index.html`
 
 ## คลังเกียรติบัตรที่จัดแสดง
 

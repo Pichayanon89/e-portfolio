@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">ภาพตัวอย่างระบบ Quick Record</title>
+  <desc id="desc">ภาพจำลองหน้าจอระบบบันทึกหลังสอน Quick Record แสดงส่วนหัว แท็บข้อมูล การ์ดครูผู้สอน โรงเรียน Workflow และแบบฟอร์มบันทึกหลังสอน</desc>
+  <defs>
+    <linearGradient id="hero" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#050b20"/>
+      <stop offset=".58" stop-color="#1e4f9a"/>
+      <stop offset="1" stop-color="#0b92c7"/>
+    </linearGradient>
+    <linearGradient id="btn" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2d68ff"/>
+      <stop offset="1" stop-color="#1747d7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0c2541" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="#eef3f8"/>
+  <rect x="28" y="28" width="1144" height="210" rx="28" fill="url(#hero)" filter="url(#shadow)"/>
+  <circle cx="135" cy="134" r="68" fill="#fff"/>
+  <circle cx="135" cy="134" r="60" fill="none" stroke="#e04aa6" stroke-width="5"/>
+  <path d="M88 122h94l-46 34z" fill="none" stroke="#2f6dff" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M123 129c0-25 13-43 13-43s13 18 13 43c0 23-13 43-13 43s-13-20-13-43z" fill="#f01d9c"/>
+  <path d="M107 134c-13-18-7-40-7-40s22 8 31 30c8 20-3 39-3 39s-8-14-21-29z" fill="#fa66b7"/>
+  <path d="M165 134c13-18 7-40 7-40s-22 8-31 30c-8 20 3 39 3 39s8-14 21-29z" fill="#fa66b7"/>
+  <text x="220" y="86" fill="#d7e8ff" font-family="Arial, sans-serif" font-size="18" font-weight="700">AI Teacher Workflow</text>
+  <text x="220" y="150" fill="#fff" font-family="Arial, sans-serif" font-size="58" font-weight="900">Quick Record</text>
+  <text x="220" y="194" fill="#eef6ff" font-family="Arial, sans-serif" font-size="22" font-weight="700">บันทึกสั้น ๆ หลังสอน แล้วระบบช่วยจัดรูปแบบเป็นหลักฐาน PA</text>
+
+  <rect x="28" y="262" width="166" height="58" rx="17" fill="url(#btn)" filter="url(#shadow)"/>
+  <text x="51" y="298" fill="#fff" font-family="Arial, sans-serif" font-size="19" font-weight="800">Quick Record</text>
+  <rect x="208" y="262" width="120" height="58" rx="17" fill="#fff" filter="url(#shadow)"/>
+  <text x="246" y="298" fill="#071529" font-family="Arial, sans-serif" font-size="19" font-weight="800">Reports</text>
+
+  <g filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect x="28" y="344" width="370" height="144" rx="24" fill="#fff" stroke="#d8e2ee"/>
+    <text x="60" y="386" fill="#5b6f87" font-size="18">ครูผู้สอน</text>
+    <text x="60" y="426" fill="#071529" font-size="26" font-weight="800">นายพิชญานนท์ วัจนสุนทร</text>
+    <rect x="416" y="344" width="370" height="144" rx="24" fill="#fff" stroke="#d8e2ee"/>
+    <text x="448" y="386" fill="#5b6f87" font-size="18">โรงเรียน</text>
+    <text x="448" y="426" fill="#071529" font-size="26" font-weight="800">อนุบาลหนองหานวิทยายน</text>
+    <rect x="804" y="344" width="368" height="144" rx="24" fill="#fff" stroke="#d8e2ee"/>
+    <text x="836" y="386" fill="#5b6f87" font-size="18">Workflow</text>
+    <text x="836" y="426" fill="#071529" font-size="26" font-weight="900">พูด/พิมพ์ → วิเคราะห์ →</text>
+    <text x="836" y="462" fill="#071529" font-size="26" font-weight="900">บันทึก</text>
+  </g>
+
+  <rect x="28" y="514" width="1144" height="350" rx="26" fill="#fff" stroke="#d8e2ee" filter="url(#shadow)"/>
+  <rect x="60" y="548" width="178" height="32" rx="16" fill="#c9fadd"/>
+  <text x="76" y="570" fill="#006743" font-family="Arial, sans-serif" font-size="15" font-weight="900">Voice + AI Fallback</text>
+  <text x="60" y="628" fill="#071529" font-family="Arial, sans-serif" font-size="30" font-weight="900">วันนี้เกิดอะไรขึ้นในห้องเรียน?</text>
+  <text x="60" y="666" fill="#516985" font-family="Arial, sans-serif" font-size="17">พิมพ์หรือพูดสั้น ๆ แล้วให้ระบบช่วยแยก K-P-A, ปัญหา, แนวทางแก้ไข และ PA Tags</text>
+
+  <g font-family="Arial, sans-serif">
+    <text x="60" y="716" fill="#071529" font-size="17" font-weight="800">วันที่</text>
+    <text x="424" y="716" fill="#071529" font-size="17" font-weight="800">วิชา</text>
+    <text x="790" y="716" fill="#071529" font-size="17" font-weight="800">ชั้นเรียน</text>
+    <rect x="60" y="736" width="344" height="62" rx="16" fill="#fff" stroke="#d6dfeb"/>
+    <text x="78" y="775" fill="#071529" font-size="20">05/17/2026</text>
+    <rect x="424" y="736" width="344" height="62" rx="16" fill="#fff" stroke="#d6dfeb"/>
+    <text x="442" y="775" fill="#071529" font-size="20">วิทยาศาสตร์และเทคโนโลยี</text>
+    <rect x="790" y="736" width="344" height="62" rx="16" fill="#fff" stroke="#d6dfeb"/>
+    <text x="808" y="775" fill="#071529" font-size="20">ป.4/2 SMT</text>
+    <text x="60" y="838" fill="#071529" font-size="17" font-weight="800">เรื่องที่สอน</text>
+    <rect x="60" y="856" width="1074" height="6" rx="3" fill="#dfe8f2"/>
+  </g>
+</svg>

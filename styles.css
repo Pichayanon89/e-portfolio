@@ -680,11 +680,26 @@ h3 {
     #fff;
 }
 
+.quick-record-card {
+  background:
+    linear-gradient(140deg, rgba(255, 224, 111, 0.2), rgba(56, 217, 255, 0.12)),
+    #fff;
+}
+
 .cockpit-card::before {
   content: "";
   position: absolute;
   inset: 0;
   border: 2px solid rgba(0, 166, 214, 0.2);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.quick-record-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(244, 184, 74, 0.26);
   border-radius: inherit;
   pointer-events: none;
 }
@@ -714,6 +729,10 @@ h3 {
   color: #17335b;
   border: 1px solid rgba(0, 166, 214, 0.25);
   background: #fff;
+}
+
+.quick-record-card .cockpit-card-actions a:first-child {
+  background: linear-gradient(135deg, #ffe06f, #58f4d1 54%, #38d9ff);
 }
 
 .drive-link {
@@ -838,6 +857,13 @@ h3 {
     radial-gradient(circle at 82% 16%, rgba(56, 217, 255, 0.22), transparent 28%),
     radial-gradient(circle at 10% 88%, rgba(244, 184, 74, 0.2), transparent 28%),
     linear-gradient(135deg, #071a2f 0%, #0b3158 54%, #0a6b83 100%);
+}
+
+.quick-hero {
+  background:
+    radial-gradient(circle at 82% 16%, rgba(56, 217, 255, 0.22), transparent 28%),
+    radial-gradient(circle at 8% 86%, rgba(255, 224, 111, 0.22), transparent 28%),
+    linear-gradient(135deg, #061028 0%, #1e4f9a 56%, #0b92c7 100%);
 }
 
 .cockpit-hero-copy h1 {

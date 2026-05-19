@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pichayanon89.github.io/https-github.com-e-portfolio-/sitemap.xml

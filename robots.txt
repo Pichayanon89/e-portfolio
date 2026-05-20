@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pichayanon89.github.io/https-github.com-e-portfolio-/sitemap.xml
+Sitemap: https://pichayanon89.github.io/SMT_2-4/sitemap.xml

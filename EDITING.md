@@ -2,6 +2,8 @@
 
 ไฟล์ที่ควรแก้บ่อยที่สุดคือ `data/site-data.json`
 
+ถ้าต้องการแก้ผ่าน Google Sheet ให้ดูคู่มือ `GOOGLE_SHEET_CMS.md`
+
 ## แก้ลิงก์ระบบ
 
 เปิด `data/site-data.json` แล้วแก้ในส่วน `links`

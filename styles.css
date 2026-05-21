@@ -476,7 +476,7 @@ h3 {
 
 .learning-media-panel {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 18px;
   margin-top: 18px;
@@ -503,6 +503,74 @@ h3 {
 
 .learning-media-panel .button {
   flex: 0 0 auto;
+}
+
+.drive-embed,
+.mini-drive-embed {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 36px rgba(7, 26, 47, 0.06);
+}
+
+.drive-embed {
+  margin-top: 18px;
+}
+
+.drive-embed iframe,
+.mini-drive-embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.drive-embed iframe {
+  height: 520px;
+}
+
+.mini-drive-embed {
+  margin-top: 14px;
+}
+
+.mini-drive-embed iframe {
+  height: 220px;
+}
+
+.drive-folder-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.drive-folder-list a,
+.mini-folder-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(0, 166, 214, 0.22);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--accent-dark);
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(7, 26, 47, 0.06);
+}
+
+.drive-folder-list a {
+  min-height: 74px;
+  padding: 14px;
+}
+
+.mini-folder-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.mini-folder-list a {
+  padding: 9px 12px;
 }
 
 .folder-tile,
@@ -1328,6 +1396,7 @@ h3 {
   .certificate-grid,
   .evidence-media-grid,
   .media-links,
+  .drive-folder-list,
   .sar-detail-grid,
   .cockpit-feature-grid {
     grid-template-columns: 1fr;

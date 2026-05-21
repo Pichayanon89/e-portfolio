@@ -28,7 +28,7 @@
 
 ## ระบบออนไลน์ที่เชื่อมในเว็บ
 
-- Teacher Cockpit SMT ป.4/2: `https://script.google.com/a/macros/udonthani3.go.th/s/AKfycbz833jyCiG9Ym9F62Zz6P6R_0fb-Wr73dtIfARasummS_XTPFev3g6EJjS_lcOoB0Gs/exec`
+- Teacher Cockpit SMT ป.4/2: `https://pichayanon89.github.io/SMT_2-4/`
 - Quick Record: `https://pichayanon89.github.io/lesson-records/index.html`
 - Facebook บัวชมพูฟิล์ม: `https://www.facebook.com/profile.php?id=61573553982676`
 - TikTok Anuban Nonghan Channel: `https://www.tiktok.com/@anubannonghan.channel`

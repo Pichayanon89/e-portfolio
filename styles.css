@@ -1413,6 +1413,13 @@ h3 {
     linear-gradient(135deg, #061028 0%, #1e4f9a 56%, #0b92c7 100%);
 }
 
+.learning-hub-hero {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 224, 111, 0.2), transparent 28%),
+    radial-gradient(circle at 12% 82%, rgba(25, 197, 138, 0.22), transparent 30%),
+    linear-gradient(135deg, #062033 0%, #0b4c82 52%, #0aa6cf 100%);
+}
+
 .cockpit-hero-copy h1 {
   max-width: 720px;
   margin: 0;
@@ -1514,6 +1521,32 @@ h3 {
   font-weight: 700;
 }
 
+.learning-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.learning-review-grid article {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, rgba(56, 217, 255, 0.12), rgba(255, 224, 111, 0.1)),
+    var(--paper);
+  box-shadow: 0 12px 36px rgba(7, 26, 47, 0.06);
+  padding: 24px;
+}
+
+.learning-review-grid h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.learning-review-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
 @media (max-width: 960px) {
   .site-header {
     align-items: flex-start;
@@ -1545,6 +1578,7 @@ h3 {
   .drive-folder-list,
   .sar-detail-grid,
   .updates-grid,
+  .learning-review-grid,
   .cockpit-feature-grid {
     grid-template-columns: 1fr;
   }

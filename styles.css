@@ -3335,6 +3335,22 @@ html[data-theme="dark"] .compact-links > span {
   color: #9ff4ff !important;
 }
 
+html[data-theme="dark"] .tag-list span,
+html[data-theme="dark"] .hub-feature-list span,
+html[data-theme="dark"] .pa-domains ol span,
+html[data-theme="dark"] .cockpit-feature-grid span {
+  color: #052033 !important;
+  background: #dff7ef !important;
+  border-color: rgba(223, 247, 239, 0.9) !important;
+}
+
+html[data-theme="dark"] .tag-list span *,
+html[data-theme="dark"] .hub-feature-list span *,
+html[data-theme="dark"] .pa-domains ol span *,
+html[data-theme="dark"] .cockpit-feature-grid span * {
+  color: #052033 !important;
+}
+
 @media (max-width: 680px) {
   html[data-theme="dark"] .nav a {
     color: #f7fbff !important;

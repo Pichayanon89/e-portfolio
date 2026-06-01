@@ -3252,3 +3252,93 @@ html[data-theme="dark"] .cockpit-card-actions a + a {
     gap: 12px;
   }
 }
+
+/* Final mobile readability guard. Keep this after all media queries. */
+html[data-theme="dark"] .band .info-grid article,
+html[data-theme="dark"] .info-grid article,
+html[data-theme="dark"] .standard-grid article,
+html[data-theme="dark"] .evidence-list article,
+html[data-theme="dark"] .archive-summary article,
+html[data-theme="dark"] .innovation-grid article,
+html[data-theme="dark"] .evidence-media-grid article,
+html[data-theme="dark"] .research-card,
+html[data-theme="dark"] .observation-card,
+html[data-theme="dark"] .subjects,
+html[data-theme="dark"] .timeline,
+html[data-theme="dark"] .score-card,
+html[data-theme="dark"] .pa-domains,
+html[data-theme="dark"] .sar-detail-grid article,
+html[data-theme="dark"] .schedule-feature,
+html[data-theme="dark"] .learning-media-panel,
+html[data-theme="dark"] .learning-hub-promo,
+html[data-theme="dark"] .media-follow,
+html[data-theme="dark"] .cockpit-feature-grid article,
+html[data-theme="dark"] .cockpit-explain,
+html[data-theme="dark"] .cockpit-flow,
+html[data-theme="dark"] .certificate-card,
+html[data-theme="dark"] .learning-review-grid article,
+html[data-theme="dark"] .updates-grid article,
+html[data-theme="dark"] .system-card,
+html[data-theme="dark"] .focus-summary,
+html[data-theme="dark"] .compact-updates,
+html[data-theme="dark"] .compact-links,
+html[data-theme="dark"] .quick-access a,
+html[data-theme="dark"] .compact-heading,
+html[data-theme="dark"] .result-grid div {
+  color: #f7fbff !important;
+  background: #0b2438 !important;
+  border-color: rgba(159, 244, 255, 0.32) !important;
+}
+
+html[data-theme="dark"] .band .info-grid article *,
+html[data-theme="dark"] .info-grid article *,
+html[data-theme="dark"] .standard-grid article *,
+html[data-theme="dark"] .evidence-list article *,
+html[data-theme="dark"] .archive-summary article *,
+html[data-theme="dark"] .innovation-grid article *,
+html[data-theme="dark"] .evidence-media-grid article *,
+html[data-theme="dark"] .research-card *,
+html[data-theme="dark"] .observation-card *,
+html[data-theme="dark"] .subjects *,
+html[data-theme="dark"] .timeline *,
+html[data-theme="dark"] .score-card *,
+html[data-theme="dark"] .pa-domains *,
+html[data-theme="dark"] .sar-detail-grid article *,
+html[data-theme="dark"] .schedule-feature *,
+html[data-theme="dark"] .learning-media-panel *,
+html[data-theme="dark"] .learning-hub-promo *,
+html[data-theme="dark"] .media-follow *,
+html[data-theme="dark"] .cockpit-feature-grid article *,
+html[data-theme="dark"] .cockpit-explain *,
+html[data-theme="dark"] .cockpit-flow *,
+html[data-theme="dark"] .certificate-card *,
+html[data-theme="dark"] .learning-review-grid article *,
+html[data-theme="dark"] .updates-grid article *,
+html[data-theme="dark"] .system-card *,
+html[data-theme="dark"] .focus-summary *,
+html[data-theme="dark"] .compact-updates *,
+html[data-theme="dark"] .compact-links *,
+html[data-theme="dark"] .quick-access a *,
+html[data-theme="dark"] .compact-heading *,
+html[data-theme="dark"] .result-grid div * {
+  color: inherit !important;
+}
+
+html[data-theme="dark"] .section-label,
+html[data-theme="dark"] .timeline-item span,
+html[data-theme="dark"] .schedule-copy span,
+html[data-theme="dark"] .certificate-card span,
+html[data-theme="dark"] .system-card span,
+html[data-theme="dark"] .focus-summary span,
+html[data-theme="dark"] .compact-updates > span,
+html[data-theme="dark"] .compact-links > span {
+  color: #9ff4ff !important;
+}
+
+@media (max-width: 680px) {
+  html[data-theme="dark"] .nav a {
+    color: #f7fbff !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(159, 244, 255, 0.26);
+  }
+}

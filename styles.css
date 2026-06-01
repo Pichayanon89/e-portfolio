@@ -2740,6 +2740,261 @@ html[data-theme="dark"] .media-links span {
   color: #9ff4ff;
 }
 
+/* Readability pass: cards must never mix light surfaces with light text. */
+body {
+  color: #082036;
+}
+
+.section,
+.band {
+  color: #082036;
+}
+
+.info-grid article,
+.standard-grid article,
+.evidence-list article,
+.archive-summary article,
+.innovation-grid article,
+.evidence-media-grid article,
+.research-card,
+.observation-card,
+.subjects,
+.timeline,
+.score-card,
+.pa-domains,
+.sar-detail-grid article,
+.schedule-feature,
+.learning-media-panel,
+.learning-hub-promo,
+.media-follow,
+.cockpit-feature-grid article,
+.cockpit-explain,
+.cockpit-flow,
+.certificate-card,
+.learning-review-grid article,
+.updates-grid article,
+.system-card,
+.focus-summary,
+.compact-updates,
+.compact-links,
+.quick-access a,
+.compact-heading,
+.result-grid div {
+  color: #082036;
+}
+
+.info-grid article h3,
+.standard-grid article h3,
+.evidence-list article h3,
+.archive-summary article h3,
+.innovation-grid article h3,
+.evidence-media-grid article h3,
+.research-card h3,
+.observation-card h3,
+.subjects h3,
+.timeline h3,
+.score-card h3,
+.pa-domains h3,
+.sar-detail-grid article h3,
+.schedule-feature h3,
+.learning-media-panel h3,
+.learning-hub-promo h3,
+.media-follow h3,
+.cockpit-feature-grid article h3,
+.cockpit-explain h2,
+.cockpit-flow h2,
+.certificate-card h3,
+.learning-review-grid article h3,
+.updates-grid article h3,
+.system-card h3,
+.focus-summary h3,
+.compact-updates h3,
+.compact-links h3,
+.compact-heading h2 {
+  color: #061a2e;
+}
+
+.info-grid article p,
+.info-grid article li,
+.standard-grid article p,
+.evidence-list article p,
+.archive-summary article p,
+.innovation-grid article p,
+.evidence-media-grid article p,
+.research-card p,
+.observation-card p,
+.subjects p,
+.timeline p,
+.score-card p,
+.pa-domains p,
+.sar-detail-grid article p,
+.schedule-feature p,
+.learning-media-panel p,
+.learning-hub-promo p,
+.media-follow p,
+.cockpit-feature-grid article p,
+.cockpit-explain p,
+.cockpit-flow li,
+.certificate-card p,
+.learning-review-grid article p,
+.updates-grid article p,
+.system-card p,
+.focus-summary dt,
+.compact-heading p:last-child {
+  color: #334e63;
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(6, 18, 32, 0.94);
+}
+
+html[data-theme="dark"] .brand strong,
+html[data-theme="dark"] .brand small {
+  color: #f4fbff;
+}
+
+html[data-theme="dark"] .nav a {
+  color: #f4fbff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(159, 244, 255, 0.22);
+}
+
+html[data-theme="dark"] .nav a:hover,
+html[data-theme="dark"] .nav a:focus-visible {
+  color: #061a2e;
+  background: #9ff4ff;
+}
+
+html[data-theme="dark"] .section,
+html[data-theme="dark"] .band {
+  color: #f4fbff;
+}
+
+html[data-theme="dark"] .info-grid article,
+html[data-theme="dark"] .standard-grid article,
+html[data-theme="dark"] .evidence-list article,
+html[data-theme="dark"] .archive-summary article,
+html[data-theme="dark"] .innovation-grid article,
+html[data-theme="dark"] .evidence-media-grid article,
+html[data-theme="dark"] .research-card,
+html[data-theme="dark"] .observation-card,
+html[data-theme="dark"] .subjects,
+html[data-theme="dark"] .timeline,
+html[data-theme="dark"] .score-card,
+html[data-theme="dark"] .pa-domains,
+html[data-theme="dark"] .sar-detail-grid article,
+html[data-theme="dark"] .schedule-feature,
+html[data-theme="dark"] .learning-media-panel,
+html[data-theme="dark"] .learning-hub-promo,
+html[data-theme="dark"] .media-follow,
+html[data-theme="dark"] .cockpit-feature-grid article,
+html[data-theme="dark"] .cockpit-explain,
+html[data-theme="dark"] .cockpit-flow,
+html[data-theme="dark"] .certificate-card,
+html[data-theme="dark"] .learning-review-grid article,
+html[data-theme="dark"] .updates-grid article,
+html[data-theme="dark"] .system-card,
+html[data-theme="dark"] .focus-summary,
+html[data-theme="dark"] .compact-updates,
+html[data-theme="dark"] .compact-links,
+html[data-theme="dark"] .quick-access a,
+html[data-theme="dark"] .compact-heading,
+html[data-theme="dark"] .result-grid div,
+html[data-theme="dark"] .band .info-grid article,
+html[data-theme="dark"] .band .score-card,
+html[data-theme="dark"] .band .pa-domains,
+html[data-theme="dark"] .band .evidence-list article {
+  color: #f4fbff;
+  background:
+    linear-gradient(135deg, rgba(11, 111, 144, 0.18), rgba(10, 143, 103, 0.1)),
+    #0c2235;
+  border-color: rgba(159, 244, 255, 0.22);
+}
+
+html[data-theme="dark"] .info-grid article h3,
+html[data-theme="dark"] .standard-grid article h3,
+html[data-theme="dark"] .evidence-list article h3,
+html[data-theme="dark"] .archive-summary article h3,
+html[data-theme="dark"] .innovation-grid article h3,
+html[data-theme="dark"] .evidence-media-grid article h3,
+html[data-theme="dark"] .research-card h3,
+html[data-theme="dark"] .observation-card h3,
+html[data-theme="dark"] .subjects h3,
+html[data-theme="dark"] .timeline h3,
+html[data-theme="dark"] .score-card h3,
+html[data-theme="dark"] .pa-domains h3,
+html[data-theme="dark"] .sar-detail-grid article h3,
+html[data-theme="dark"] .schedule-feature h3,
+html[data-theme="dark"] .learning-media-panel h3,
+html[data-theme="dark"] .learning-hub-promo h3,
+html[data-theme="dark"] .media-follow h3,
+html[data-theme="dark"] .cockpit-feature-grid article h3,
+html[data-theme="dark"] .cockpit-explain h2,
+html[data-theme="dark"] .cockpit-flow h2,
+html[data-theme="dark"] .certificate-card h3,
+html[data-theme="dark"] .learning-review-grid article h3,
+html[data-theme="dark"] .updates-grid article h3,
+html[data-theme="dark"] .system-card h3,
+html[data-theme="dark"] .focus-summary h3,
+html[data-theme="dark"] .compact-updates h3,
+html[data-theme="dark"] .compact-links h3,
+html[data-theme="dark"] .compact-heading h2 {
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .info-grid article p,
+html[data-theme="dark"] .info-grid article li,
+html[data-theme="dark"] .standard-grid article p,
+html[data-theme="dark"] .evidence-list article p,
+html[data-theme="dark"] .archive-summary article p,
+html[data-theme="dark"] .innovation-grid article p,
+html[data-theme="dark"] .evidence-media-grid article p,
+html[data-theme="dark"] .research-card p,
+html[data-theme="dark"] .observation-card p,
+html[data-theme="dark"] .subjects p,
+html[data-theme="dark"] .timeline p,
+html[data-theme="dark"] .score-card p,
+html[data-theme="dark"] .pa-domains p,
+html[data-theme="dark"] .sar-detail-grid article p,
+html[data-theme="dark"] .schedule-feature p,
+html[data-theme="dark"] .learning-media-panel p,
+html[data-theme="dark"] .learning-hub-promo p,
+html[data-theme="dark"] .media-follow p,
+html[data-theme="dark"] .cockpit-feature-grid article p,
+html[data-theme="dark"] .cockpit-explain p,
+html[data-theme="dark"] .cockpit-flow li,
+html[data-theme="dark"] .certificate-card p,
+html[data-theme="dark"] .learning-review-grid article p,
+html[data-theme="dark"] .updates-grid article p,
+html[data-theme="dark"] .system-card p,
+html[data-theme="dark"] .focus-summary dt,
+html[data-theme="dark"] .compact-heading p:last-child,
+html[data-theme="dark"] .check-list li {
+  color: #d8e9f6;
+}
+
+html[data-theme="dark"] .section-label,
+html[data-theme="dark"] .timeline-item span,
+html[data-theme="dark"] .schedule-copy span,
+html[data-theme="dark"] .certificate-card span,
+html[data-theme="dark"] .system-card span,
+html[data-theme="dark"] .focus-summary span,
+html[data-theme="dark"] .compact-updates > span,
+html[data-theme="dark"] .compact-links > span {
+  color: #9ff4ff;
+}
+
+html[data-theme="dark"] .button.secondary.light,
+html[data-theme="dark"] .drive-folder-list a,
+html[data-theme="dark"] .mini-folder-list a,
+html[data-theme="dark"] .media-links a,
+html[data-theme="dark"] .compact-links a,
+html[data-theme="dark"] .cockpit-card-actions a + a {
+  color: #f4fbff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(159, 244, 255, 0.25);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

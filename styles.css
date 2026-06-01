@@ -2094,6 +2094,47 @@ body::before {
   align-items: start;
 }
 
+.answer-block {
+  padding-top: clamp(34px, 5vw, 68px);
+  padding-bottom: clamp(34px, 5vw, 68px);
+}
+
+.answer-grid,
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.answer-grid article,
+.faq-grid article {
+  padding: 22px;
+  border: 1px solid rgba(8, 49, 78, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 42px rgba(6, 26, 46, 0.07);
+}
+
+.answer-grid h3,
+.faq-grid h3 {
+  margin: 0 0 12px;
+}
+
+.answer-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  color: #334e63;
+  font-weight: 700;
+}
+
+.faq-grid p {
+  margin: 0;
+  color: #334e63;
+  font-weight: 650;
+}
+
 .system-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3182,6 +3223,8 @@ html[data-theme="dark"] .cockpit-card-actions a + a {
   .stats-grid,
   .quick-access,
   .updates-grid,
+  .answer-grid,
+  .faq-grid,
   .drive-folder-list,
   .archive-summary,
   .standard-grid,
@@ -3288,6 +3331,18 @@ html[data-theme="dark"] .result-grid div {
   color: #f7fbff !important;
   background: #0b2438 !important;
   border-color: rgba(159, 244, 255, 0.32) !important;
+}
+
+html[data-theme="dark"] .answer-grid article,
+html[data-theme="dark"] .faq-grid article {
+  color: #f7fbff !important;
+  background: #0b2438 !important;
+  border-color: rgba(159, 244, 255, 0.32) !important;
+}
+
+html[data-theme="dark"] .answer-grid article *,
+html[data-theme="dark"] .faq-grid article * {
+  color: inherit !important;
 }
 
 html[data-theme="dark"] .band .info-grid article *,

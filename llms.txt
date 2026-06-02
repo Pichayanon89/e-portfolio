@@ -14,11 +14,12 @@
 
 ## หน้าเว็บหลัก
 
-- หน้าแรกและภาพรวมแฟ้มสะสมงาน: https://pichayanon89.github.io/SMT_2-4/
-- Teacher Cockpit SMT ป.4/2: https://pichayanon89.github.io/SMT_2-4/teacher-cockpit.html
-- Quick Record: https://pichayanon89.github.io/SMT_2-4/quick-record.html
-- Learning Hub: https://pichayanon89.github.io/SMT_2-4/learning-hub.html
-- คลังเกียรติบัตร: https://pichayanon89.github.io/SMT_2-4/certificates.html
+- หน้าแรกและภาพรวมแฟ้มสะสมงาน: https://pichayanon89.github.io/e-portfolio/
+- Teacher Cockpit SMT ป.4/2: https://pichayanon89.github.io/e-portfolio/teacher-cockpit.html
+- Quick Record: https://pichayanon89.github.io/e-portfolio/quick-record.html
+- Learning Hub: https://pichayanon89.github.io/e-portfolio/learning-hub.html
+- คลังเกียรติบัตร: https://pichayanon89.github.io/e-portfolio/certificates.html
+- ระบบ Teacher Cockpit จริง: https://pichayanon89.github.io/SMT_2-4/
 
 ## ข้อควรระวัง
 

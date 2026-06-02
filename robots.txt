@@ -22,4 +22,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://pichayanon89.github.io/SMT_2-4/sitemap.xml
+Sitemap: https://pichayanon89.github.io/e-portfolio/sitemap.xml

@@ -27,7 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260601-geo1" />
+    <link rel="stylesheet" href="styles.css?v=20260604-ai1" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -115,6 +115,71 @@
         </div>
       </section>
 
+      <section class="section lesson-ai-section" id="ai-reflection">
+        <div class="section-heading">
+          <p class="section-label">AI Lesson Reflection</p>
+          <h2>ทดลองวิเคราะห์บันทึกหลังสอนด้วย Gemini</h2>
+          <p>
+            เครื่องมือนี้ส่งบันทึกไปยัง serverless function เพื่อให้ Gemini ช่วยจัดระเบียบเป็นสรุป K-P-A ปัญหา แนวทางแก้ไข และ PA Tags
+            โดยไม่เปิดเผย API key บนหน้าเว็บ
+          </p>
+        </div>
+
+        <div class="lesson-ai-tool" data-lesson-ai>
+          <form class="lesson-ai-form" data-lesson-ai-form>
+            <div class="lesson-ai-fields">
+              <label>
+                <span>วันที่สอน</span>
+                <input name="lessonDate" type="date" />
+              </label>
+              <label>
+                <span>รายวิชา</span>
+                <input name="subject" type="text" value="วิทยาศาสตร์และเทคโนโลยี" autocomplete="off" />
+              </label>
+              <label>
+                <span>ชั้นเรียน</span>
+                <input name="gradeLevel" type="text" value="ป.4/2 SMT" autocomplete="off" />
+              </label>
+            </div>
+
+            <label class="lesson-note-field">
+              <span>บันทึกหลังสอนต้นฉบับ</span>
+              <textarea
+                name="note"
+                rows="7"
+                required
+                minlength="20"
+                placeholder="เช่น วันนี้นักเรียนส่วนใหญ่เข้าใจการใช้บล็อกคำสั่ง Scratch แต่ยังมีบางกลุ่มสับสนเรื่องลำดับคำสั่ง จึงให้เพื่อนช่วยอธิบายและสรุปขั้นตอนร่วมกัน"
+              ></textarea>
+            </label>
+
+            <div class="lesson-ai-actions">
+              <button class="button primary" type="submit" data-lesson-ai-submit>
+                วิเคราะห์บันทึกด้วย AI
+              </button>
+              <button class="button secondary light" type="button" data-lesson-ai-clear>
+                ล้างข้อความ
+              </button>
+            </div>
+          </form>
+
+          <div class="lesson-ai-status" data-lesson-ai-status aria-live="polite"></div>
+
+          <article class="lesson-ai-output" data-lesson-ai-output hidden>
+            <span>ผลวิเคราะห์จาก AI</span>
+            <div data-lesson-ai-result></div>
+          </article>
+
+          <article class="lesson-ai-history" data-lesson-ai-history hidden>
+            <div class="lesson-ai-history-heading">
+              <span>ประวัติล่าสุดในเครื่องนี้</span>
+              <button type="button" data-lesson-ai-clear-history>ล้างประวัติ</button>
+            </div>
+            <div data-lesson-ai-history-list></div>
+          </article>
+        </div>
+      </section>
+
       <section class="section band">
         <div class="cockpit-explain-layout">
           <article class="cockpit-explain">
@@ -146,5 +211,6 @@
       <a href="#top">กลับด้านบน</a>
     </footer>
     <script src="assets/site-data.js" defer></script>
+    <script src="assets/lesson-reflection.js" defer></script>
   </body>
 </html>

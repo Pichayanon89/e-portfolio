@@ -1586,6 +1586,182 @@ h3 {
   font-weight: 700;
 }
 
+.lesson-ai-section {
+  background:
+    linear-gradient(135deg, rgba(11, 111, 144, 0.1), rgba(10, 143, 103, 0.06)),
+    rgba(255, 255, 255, 0.72);
+}
+
+.lesson-ai-tool {
+  display: grid;
+  gap: 18px;
+  max-width: 980px;
+}
+
+.lesson-ai-form,
+.lesson-ai-output,
+.lesson-ai-history {
+  padding: clamp(18px, 4vw, 28px);
+  border: 1px solid rgba(8, 49, 78, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 46px rgba(6, 26, 46, 0.08);
+}
+
+.lesson-ai-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.lesson-ai-form label,
+.lesson-note-field {
+  display: grid;
+  gap: 8px;
+  color: #061a2e;
+  font-weight: 800;
+}
+
+.lesson-ai-form input,
+.lesson-ai-form textarea {
+  width: 100%;
+  border: 1px solid rgba(8, 49, 78, 0.18);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #061a2e;
+  background: #ffffff;
+  font: inherit;
+}
+
+.lesson-ai-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.lesson-note-field {
+  margin-top: 16px;
+}
+
+.lesson-ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.lesson-ai-actions .button {
+  border: 0;
+  cursor: pointer;
+}
+
+.lesson-ai-actions .button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+  transform: none;
+}
+
+.lesson-ai-status {
+  min-height: 28px;
+  color: #334e63;
+  font-weight: 800;
+}
+
+.lesson-ai-status[data-state="loading"] {
+  color: #005f86;
+}
+
+.lesson-ai-status[data-state="success"] {
+  color: #08734f;
+}
+
+.lesson-ai-status[data-state="error"] {
+  color: #a52727;
+}
+
+.lesson-ai-output > span,
+.lesson-ai-history-heading > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #005f86;
+  font-weight: 800;
+}
+
+.lesson-ai-output p,
+.lesson-history-block p {
+  margin: 0 0 12px;
+  color: #334e63;
+  font-weight: 650;
+}
+
+.lesson-ai-history-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.lesson-ai-history-heading button {
+  border: 1px solid rgba(8, 49, 78, 0.18);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #061a2e;
+  background: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.lesson-ai-history details {
+  border-top: 1px solid rgba(8, 49, 78, 0.1);
+  padding: 12px 0;
+}
+
+.lesson-ai-history summary {
+  cursor: pointer;
+  color: #061a2e;
+  font-weight: 800;
+}
+
+.lesson-ai-history summary span {
+  display: block;
+  color: #334e63;
+  font-size: 13px;
+}
+
+.lesson-history-block {
+  margin-top: 12px;
+}
+
+.lesson-history-block h4 {
+  margin: 12px 0 6px;
+  color: #061a2e;
+}
+
+html[data-theme="dark"] .lesson-ai-form,
+html[data-theme="dark"] .lesson-ai-output,
+html[data-theme="dark"] .lesson-ai-history {
+  color: #f7fbff;
+  background: #0b2438;
+  border-color: rgba(159, 244, 255, 0.32);
+}
+
+html[data-theme="dark"] .lesson-ai-form label,
+html[data-theme="dark"] .lesson-note-field,
+html[data-theme="dark"] .lesson-ai-output p,
+html[data-theme="dark"] .lesson-history-block p,
+html[data-theme="dark"] .lesson-ai-history summary,
+html[data-theme="dark"] .lesson-ai-history summary span,
+html[data-theme="dark"] .lesson-history-block h4 {
+  color: #f7fbff;
+}
+
+html[data-theme="dark"] .lesson-ai-form input,
+html[data-theme="dark"] .lesson-ai-form textarea,
+html[data-theme="dark"] .lesson-ai-history-heading button {
+  color: #061a2e;
+  background: #ffffff;
+}
+
 .learning-review-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1645,6 +1821,10 @@ h3 {
   .updates-grid,
   .learning-review-grid,
   .cockpit-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-ai-fields {
     grid-template-columns: 1fr;
   }
 

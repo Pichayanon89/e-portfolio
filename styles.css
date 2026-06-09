@@ -1586,6 +1586,63 @@ h3 {
   font-weight: 700;
 }
 
+.health-summary {
+  background:
+    linear-gradient(135deg, rgba(11, 111, 144, 0.08), rgba(10, 143, 103, 0.06)),
+    #f7fcff;
+}
+
+.health-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.health-summary-grid article {
+  border: 1px solid rgba(8, 49, 78, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px rgba(6, 26, 46, 0.08);
+  padding: 22px;
+}
+
+.health-summary-grid span {
+  display: block;
+  color: #0b6f90;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.health-summary-grid strong {
+  display: block;
+  margin: 8px 0 6px;
+  color: var(--ink);
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1;
+}
+
+.health-summary-grid p,
+.health-note p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.health-note {
+  margin-top: 18px;
+  border: 1px solid rgba(11, 111, 144, 0.2);
+  border-radius: 14px;
+  background: rgba(236, 249, 255, 0.92);
+  padding: 20px;
+}
+
+.health-note strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: 18px;
+}
+
 .lesson-ai-section {
   background:
     linear-gradient(135deg, rgba(11, 111, 144, 0.1), rgba(10, 143, 103, 0.06)),
@@ -2729,6 +2786,9 @@ html[data-theme="dark"] .certificate-card,
 html[data-theme="dark"] .cockpit-feature-grid article,
 html[data-theme="dark"] .cockpit-explain,
 html[data-theme="dark"] .cockpit-flow,
+html[data-theme="dark"] .health-summary,
+html[data-theme="dark"] .health-summary-grid article,
+html[data-theme="dark"] .health-note,
 html[data-theme="dark"] .learning-review-grid article,
 html[data-theme="dark"] .system-card,
 html[data-theme="dark"] .focus-summary,
@@ -2773,8 +2833,14 @@ html[data-theme="dark"] .timeline-item p,
 html[data-theme="dark"] .learning-review-grid p,
 html[data-theme="dark"] .cockpit-flow li,
 html[data-theme="dark"] .cockpit-feature-grid p,
-html[data-theme="dark"] .cockpit-explain p {
+html[data-theme="dark"] .cockpit-explain p,
+html[data-theme="dark"] .health-summary-grid p,
+html[data-theme="dark"] .health-note p {
   color: var(--muted);
+}
+
+html[data-theme="dark"] .health-summary-grid span {
+  color: #67e8f9;
 }
 
 html[data-theme="dark"] .quick-access strong,
@@ -2785,6 +2851,8 @@ html[data-theme="dark"] .media-links strong,
 html[data-theme="dark"] .result-grid strong,
 html[data-theme="dark"] .archive-summary strong,
 html[data-theme="dark"] .certificate-card h3,
+html[data-theme="dark"] .health-summary-grid strong,
+html[data-theme="dark"] .health-note strong,
 html[data-theme="dark"] .learning-review-grid h3 {
   color: var(--ink);
 }
@@ -3410,6 +3478,7 @@ html[data-theme="dark"] .cockpit-card-actions a + a {
   .standard-grid,
   .sar-detail-grid,
   .cockpit-feature-grid,
+  .health-summary-grid,
   .innovation-grid,
   .certificate-grid {
     grid-template-columns: 1fr;

@@ -1,5 +1,6 @@
 const GEMINI_API_VERSION = "v1beta";
 const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_ALLOWED_ORIGIN = "https://pichayanon89.github.io";
 
 function sendJson(res, statusCode, payload) {
   res.statusCode = statusCode;
@@ -9,13 +10,22 @@ function sendJson(res, statusCode, payload) {
 }
 
 function setCors(req, res) {
-  const allowedOrigin = process.env.ALLOWED_ORIGIN || "*";
+  const allowedOrigin = process.env.ALLOWED_ORIGIN || DEFAULT_ALLOWED_ORIGIN;
+  const requestOrigin = req.headers.origin;
+  res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   if (req.method === "OPTIONS") {
     res.statusCode = 204;
     res.end();
+    return true;
+  }
+  if (requestOrigin && requestOrigin !== allowedOrigin) {
+    sendJson(res, 403, {
+      error: "ORIGIN_NOT_ALLOWED",
+      message: "Origin นี้ไม่ได้รับอนุญาตให้เรียกใช้ API"
+    });
     return true;
   }
   return false;

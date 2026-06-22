@@ -50,6 +50,16 @@ window.PORTFOLIO_SUPABASE = {
 
 หลังแก้แล้ว commit และ push ขึ้น GitHub
 
+## อัปเดตด้านความปลอดภัย
+
+หลังอัปเดตโค้ด ให้รัน `supabase/portfolio_schema.sql` ใน Supabase SQL Editor อีกครั้ง เพื่อเพิ่มคอลัมน์และตารางด้านความปลอดภัย:
+
+- `deleted_at`, `deleted_by` สำหรับ soft delete
+- `portfolio_audit_logs` สำหรับบันทึก create, update และ soft delete
+- `role` ใน `portfolio_profiles` สำหรับต่อยอด RBAC ในระยะถัดไป
+
+ระบบ admin จะรับลิงก์หลักฐานและลิงก์ภาพปกเฉพาะ URL ที่ขึ้นต้นด้วย `http://` หรือ `https://` เท่านั้น เพื่อลดความเสี่ยง XSS จาก URL ที่ไม่ปลอดภัย
+
 ## การส่งรหัสผ่าน/ตั้งรหัสผ่าน
 
 ไม่ควรส่งรหัสผ่านจริงทางอีเมล ให้ใช้วิธีส่งลิงก์ตั้งรหัสผ่านแทน
@@ -80,7 +90,7 @@ https://pichayanon89.github.io/e-portfolio/portfolio-admin/
 1. Login ด้วยอีเมลครู
 2. เพิ่มผลงานใหม่ทุกครั้งที่มีหลักฐาน
 3. ใส่ปีการศึกษา ภาคเรียน ประเภทผลงาน ตัวชี้วัด PA และมาตรฐาน SAR
-4. วางลิงก์ Google Drive หรือ URL หลักฐาน
+4. วางลิงก์ Google Drive หรือ URL หลักฐาน โดยใช้เฉพาะ `http://` หรือ `https://`
 5. ตั้งสถานะ:
    - `draft` ร่าง
    - `ready` พร้อมใช้ตอนประเมิน
@@ -114,6 +124,7 @@ PA1, PA2, SAR3, SMT, วิทยาการคำนวณ, เลื่อน
 ```text
 status = published
 public_on_profile = true
+deleted_at is null
 ```
 
 ดังนั้น e-Portfolio สามารถดึงข้อมูล published มาแสดงได้ภายหลัง โดยไม่เปิดข้อมูล draft หรือ ready สู่สาธารณะ

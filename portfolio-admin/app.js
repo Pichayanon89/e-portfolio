@@ -58,8 +58,8 @@ function readForm(form) {
     sar_standard: formData.get("sar_standard") || "",
     evidence_type: formData.get("evidence_type") || "",
     status: formData.get("status") || "draft",
-    evidence_url: formData.get("evidence_url") || "",
-    cover_image_url: formData.get("cover_image_url") || "",
+    evidence_url: normalizeHttpUrl(formData.get("evidence_url") || ""),
+    cover_image_url: normalizeHttpUrl(formData.get("cover_image_url") || ""),
     description: formData.get("description") || "",
     notes: formData.get("notes") || "",
     public_on_profile: Boolean(formData.get("public_on_profile")),
@@ -143,65 +143,100 @@ function renderWorks() {
   const works = filteredWorks();
 
   if (!works.length) {
-    els.workList.innerHTML = '<div class="empty-state">ยังไม่มีรายการที่ตรงกับเงื่อนไข</div>';
+    els.workList.replaceChildren(createElement("div", { className: "empty-state", text: "ยังไม่มีรายการที่ตรงกับเงื่อนไข" }));
     return;
   }
 
-  els.workList.replaceChildren(...works.map((work) => {
-    const card = document.createElement("article");
-    card.className = "work-card";
-
-    const evidenceLink = work.evidence_url
-      ? `<a href="${work.evidence_url}" target="_blank" rel="noreferrer">เปิดหลักฐาน</a>`
-      : "";
-
-    card.innerHTML = `
-      <div class="work-card-header">
-        <div>
-          <div class="meta-row">
-            <span>${work.academic_year || "-"}</span>
-            <span>${work.category || "-"}</span>
-            <span class="status-pill ${work.status}">${work.status}</span>
-            ${work.public_on_profile ? "<span>e-Portfolio</span>" : ""}
-          </div>
-          <h3>${escapeHtml(work.title)}</h3>
-          <p>${escapeHtml(work.description || "ไม่มีรายละเอียด")}</p>
-        </div>
-      </div>
-      <div class="work-card-body">
-        <div class="meta-row">
-          ${work.pa_indicator ? `<span>${escapeHtml(work.pa_indicator)}</span>` : ""}
-          ${work.sar_standard ? `<span>${escapeHtml(work.sar_standard)}</span>` : ""}
-          ${work.work_level ? `<span>${escapeHtml(work.work_level)}</span>` : ""}
-          ${work.work_date ? `<span>${escapeHtml(work.work_date)}</span>` : ""}
-        </div>
-        <div class="tag-row">
-          ${(work.tags || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
-        </div>
-      </div>
-      <div class="card-actions">
-        <button type="button" data-action="edit" data-id="${work.id}">แก้ไข</button>
-        ${evidenceLink}
-        <button class="delete" type="button" data-action="delete" data-id="${work.id}">ลบ</button>
-      </div>
-    `;
-    return card;
-  }));
+  els.workList.replaceChildren(...works.map(renderWorkCard));
 }
 
-function escapeHtml(value) {
-  return String(value || "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+function renderWorkCard(work) {
+  const card = createElement("article", { className: "work-card" });
+  const header = createElement("div", { className: "work-card-header" });
+  const headerBody = createElement("div");
+  const headerMeta = createElement("div", { className: "meta-row" });
+
+  appendTextPill(headerMeta, work.academic_year || "-");
+  appendTextPill(headerMeta, work.category || "-");
+  headerMeta.append(createElement("span", {
+    className: `status-pill ${safeClassName(work.status)}`,
+    text: work.status || "draft",
+  }));
+  if (work.public_on_profile) appendTextPill(headerMeta, "e-Portfolio");
+
+  headerBody.append(
+    headerMeta,
+    createElement("h3", { text: work.title || "ไม่มีชื่อผลงาน" }),
+    createElement("p", { text: work.description || "ไม่มีรายละเอียด" })
+  );
+  header.append(headerBody);
+
+  const body = createElement("div", { className: "work-card-body" });
+  const bodyMeta = createElement("div", { className: "meta-row" });
+  [work.pa_indicator, work.sar_standard, work.work_level, work.work_date]
+    .filter(Boolean)
+    .forEach((value) => appendTextPill(bodyMeta, value));
+
+  const tagRow = createElement("div", { className: "tag-row" });
+  (work.tags || []).forEach((tag) => appendTextPill(tagRow, tag));
+  body.append(bodyMeta, tagRow);
+
+  const actions = createElement("div", { className: "card-actions" });
+  actions.append(createActionButton("edit", work.id, "แก้ไข"));
+
+  const evidenceUrl = normalizeHttpUrl(work.evidence_url || "");
+  if (evidenceUrl) {
+    const evidenceLink = createElement("a", { text: "เปิดหลักฐาน" });
+    evidenceLink.href = evidenceUrl;
+    evidenceLink.target = "_blank";
+    evidenceLink.rel = "noreferrer noopener";
+    actions.append(evidenceLink);
+  }
+
+  actions.append(createActionButton("delete", work.id, "ลบ", "delete"));
+  card.append(header, body, actions);
+  return card;
+}
+
+function createElement(tagName, options = {}) {
+  const el = document.createElement(tagName);
+  if (options.className) el.className = options.className;
+  if (Object.hasOwn(options, "text")) el.textContent = options.text;
+  return el;
+}
+
+function appendTextPill(parent, text) {
+  parent.append(createElement("span", { text: String(text || "-") }));
+}
+
+function createActionButton(action, id, label, className = "") {
+  const button = createElement("button", { className, text: label });
+  button.type = "button";
+  button.dataset.action = action;
+  button.dataset.id = id;
+  return button;
+}
+
+function normalizeHttpUrl(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+  try {
+    const url = new URL(raw);
+    return ["http:", "https:"].includes(url.protocol) ? url.href : "";
+  } catch {
+    return "";
+  }
+}
+
+function safeClassName(value) {
+  return String(value || "").replace(/[^a-z0-9_-]/gi, "");
 }
 
 async function loadWorks() {
   const { data, error } = await state.client
     .from("portfolio_works")
     .select("*")
+    .is("deleted_at", null)
     .order("work_date", { ascending: false, nullsFirst: false })
     .order("created_at", { ascending: false });
 
@@ -216,6 +251,16 @@ async function saveWork(event) {
   const id = record.id;
   delete record.id;
 
+  if (els.workForm.elements.evidence_url.value && !record.evidence_url) {
+    els.formMessage.textContent = "ลิงก์หลักฐานต้องเป็น http หรือ https เท่านั้น";
+    return;
+  }
+
+  if (els.workForm.elements.cover_image_url.value && !record.cover_image_url) {
+    els.formMessage.textContent = "ลิงก์ภาพปกต้องเป็น http หรือ https เท่านั้น";
+    return;
+  }
+
   record.owner_id = state.user.id;
   record.updated_at = new Date().toISOString();
 
@@ -229,19 +274,44 @@ async function saveWork(event) {
     return;
   }
 
+  await writeAuditLog(id ? "update" : "create", "portfolio_works", id || null, record);
   els.formMessage.textContent = "บันทึกข้อมูลเรียบร้อย";
   setForm(null);
   await loadWorks();
 }
 
 async function deleteWork(id) {
-  if (!confirm("ลบรายการผลงานนี้หรือไม่")) return;
-  const { error } = await state.client.from("portfolio_works").delete().eq("id", id);
+  if (!confirm("เก็บรายการผลงานนี้เข้าถังเก็บถาวรหรือไม่")) return;
+  const payload = {
+    status: "archived",
+    public_on_profile: false,
+    deleted_at: new Date().toISOString(),
+    deleted_by: state.user.id,
+    updated_at: new Date().toISOString(),
+  };
+  const { error } = await state.client.from("portfolio_works").update(payload).eq("id", id);
   if (error) {
-    els.formMessage.textContent = `ลบไม่สำเร็จ: ${error.message}`;
+    els.formMessage.textContent = `เก็บถาวรไม่สำเร็จ: ${error.message}`;
     return;
   }
+  await writeAuditLog("soft_delete", "portfolio_works", id, payload);
   await loadWorks();
+}
+
+async function writeAuditLog(action, tableName, recordId, metadata = {}) {
+  if (!state.client || !state.user) return;
+  try {
+    await state.client.from("portfolio_audit_logs").insert({
+      user_id: state.user.id,
+      action,
+      table_name: tableName,
+      record_id: recordId,
+      user_agent: navigator.userAgent,
+      metadata,
+    });
+  } catch (_) {
+    // Audit logging must not block the teacher's primary workflow.
+  }
 }
 
 async function login(event) {

@@ -1236,6 +1236,32 @@ h3 {
     #fff;
 }
 
+.speaker-card {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(11, 111, 144, 0.28);
+  background:
+    linear-gradient(140deg, rgba(11, 111, 144, 0.16), rgba(244, 184, 74, 0.12)),
+    #fff;
+}
+
+.speaker-card::after {
+  content: "";
+  position: absolute;
+  right: -54px;
+  top: -54px;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 166, 214, 0.2), transparent 68%);
+  pointer-events: none;
+}
+
+.speaker-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .cockpit-card::before {
   content: "";
   position: absolute;
@@ -1259,6 +1285,15 @@ h3 {
   position: absolute;
   inset: 0;
   border: 2px solid rgba(0, 143, 194, 0.22);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.speaker-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(0, 166, 214, 0.18);
   border-radius: inherit;
   pointer-events: none;
 }
